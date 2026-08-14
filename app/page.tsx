@@ -491,7 +491,7 @@ export default function Home() {
             <article className="rounded-[28px] border border-[#dde1e8] bg-white px-4 pt-4 pb-[26px] shadow-[0_12px_35px_rgb(15_23_42/5%)] max-sm:rounded-[22px] max-sm:px-2.5 max-sm:pt-2.5 max-sm:pb-6">
               <div className="aspect-video overflow-hidden rounded-[18px] bg-[#0a0d13] max-sm:rounded-[14px] [&_iframe]:size-full [&_iframe]:border-0">
                 <iframe
-                  src="https://www.youtube-nocookie.com/embed/r7KsQtp5asU"
+                  src="https://www.youtube-nocookie.com/embed/DnsbxehHpO0"
                   title="Tesdrive for Tesla 내비게이션 모드 사용 영상"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
