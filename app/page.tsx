@@ -60,8 +60,7 @@ const screenGroups = [
   {
     id: "dashboard-mode",
     title: "대시보드",
-    description:
-      "속도와 배터리, 기어와 타이어까지. 차에 관한 숫자를 한 장에 모았습니다.",
+    description: "속도와 기어, 배터리, 타이어 등 필요한 정보를 한눈에.",
     screens: [
       {
         src: dashboardFlipScreen,
@@ -72,8 +71,8 @@ const screenGroups = [
       },
       {
         src: vehicleStatusScreen,
-        eyebrow: "상태 한 장에",
-        title: "차 상태를 한 장으로",
+        eyebrow: "한눈에 확인",
+        title: "차량 상태를 한눈에",
         description:
           "배터리와 주행 가능 거리, 문 열림 상태, 목적지와 재생 중인 음악까지 담았습니다.",
         alt: "차량 이미지와 배터리, 주행 가능 거리, 문 열림, 목적지와 미디어 정보가 표시된 Tesdrive 대시보드",
@@ -124,7 +123,7 @@ const screenGroups = [
         eyebrow: "도착 정보",
         title: "도착 정보를 띄우는 HUD",
         description:
-          "테슬라에서 목적지를 정하면 목적지명과 예상 도착 시각, 남은 거리와 도착 시 배터리가 따라옵니다.",
+          "테슬라에서 목적지를 설정하면 목적지 이름과 예상 도착 시각, 남은 거리, 도착 예상 배터리 잔량이 표시됩니다.",
         alt: "전면 유리 반사를 위해 좌우 반전된 속도계, 목적지명, 예상 도착 시각, 남은 거리와 배터리 정보가 표시된 Tesdrive HUD 화면",
         badge: "좌우 반전 화면",
       },
@@ -294,7 +293,7 @@ export default function Home() {
 
       <main id="top" tabIndex={-1}>
         <section
-          className={`${shell} relative isolate mt-9 overflow-clip rounded-[36px] border border-[#e1e4eb] [background:radial-gradient(circle_at_52%_28%,rgb(37_99_235/13%),transparent_34%),radial-gradient(circle_at_8%_10%,rgb(255_226_153/24%),transparent_23%),#fff] px-[68px] pt-16 pb-11 text-center shadow-[0_24px_70px_rgb(18_27_50/9%)] max-[900px]:px-[38px] max-[900px]:pt-[60px] max-[900px]:pb-[38px] max-sm:mt-2.5 max-sm:w-[calc(100%-16px)] max-sm:rounded-[26px] max-sm:px-3.5 max-sm:pt-[52px] max-sm:pb-[22px] before:absolute before:top-24 before:-left-[330px] before:-z-10 before:size-[380px] before:rotate-45 before:border before:border-[#2563eb]/10 before:content-[''] after:absolute after:top-[210px] after:-right-[350px] after:-z-10 after:size-[380px] after:rotate-45 after:border after:border-[#2563eb]/10 after:content-['']`}
+          className={`${shell} relative isolate mt-9 overflow-clip rounded-[36px] border border-[#e1e4eb] [background:radial-gradient(circle_at_52%_28%,rgb(37_99_235/13%),transparent_34%),radial-gradient(circle_at_8%_10%,rgb(255_226_153/24%),transparent_23%),#fff] px-[68px] py-16 text-center shadow-[0_24px_70px_rgb(18_27_50/9%)] max-[900px]:px-[38px] max-[900px]:py-[60px] max-sm:mt-2.5 max-sm:w-[calc(100%-16px)] max-sm:rounded-[26px] max-sm:px-3.5 max-sm:py-[52px] before:absolute before:top-24 before:-left-[330px] before:-z-10 before:size-[380px] before:rotate-45 before:border before:border-[#2563eb]/10 before:content-[''] after:absolute after:top-[210px] after:-right-[350px] after:-z-10 after:size-[380px] after:rotate-45 after:border after:border-[#2563eb]/10 after:content-['']`}
           aria-labelledby="hero-title"
         >
           <div className="relative z-[2] mx-auto max-w-[840px]">
@@ -321,7 +320,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative mx-auto mt-9 -mb-[18px] before:absolute before:inset-[12%_8%_10%] before:-z-10 before:rounded-full before:bg-[#2563eb]/30 before:blur-[60px] before:content-[''] max-sm:mt-8">
+          <div className="relative mx-auto mt-9 before:absolute before:inset-[12%_8%_10%] before:-z-10 before:rounded-full before:bg-[#2563eb]/30 before:blur-[60px] before:content-[''] max-sm:mt-8">
             <div className="grid place-items-center">
               <div
                 className="group relative w-full max-w-[820px] rounded-[clamp(24px,4vw,46px)] border border-[#30394a] bg-[linear-gradient(145deg,#222a38,#07090d_42%,#151b25)] px-[clamp(14px,2vw,22px)] py-[clamp(7px,1.2vw,12px)] shadow-[inset_0_0_0_1px_rgb(255_255_255/6%),0_42px_80px_rgb(5_11_22/28%)] before:absolute before:-top-1 before:left-[18%] before:h-1 before:w-[86px] before:rounded-t before:bg-[#252e3d] before:content-[''] after:absolute after:top-1/2 after:left-[5px] after:size-1.5 after:-translate-y-1/2 after:rounded-full after:border-2 after:border-[#293345] after:bg-[#080b11] after:shadow-[0_0_0_2px_#05070a] after:content-[''] max-sm:px-2.5 max-sm:before:left-1/5 max-sm:before:w-12"
