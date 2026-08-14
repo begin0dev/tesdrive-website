@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 import chargingScreen from "../assets/images/screenshots/charging.jpg";
-import dashboardScreen from "../assets/images/screenshots/dashboard.png";
+import dashboardFlipScreen from "../assets/images/screenshots/dashboard-flip.png";
 import googlePlayBadge from "../assets/images/google-play-badge.png";
 import hudMediaScreen from "../assets/images/screenshots/hud-media.png";
 import hudNavigationScreen from "../assets/images/screenshots/hud-navigation.png";
@@ -64,12 +64,11 @@ const screenGroups = [
       "속도와 배터리, 기어와 타이어까지. 차에 관한 숫자를 한 장에 모았습니다.",
     screens: [
       {
-        src: dashboardScreen,
-        eyebrow: "속도 우선",
-        title: "주행 중일 땐 속도계로",
-        description:
-          "현재 속도와 기어, 그 외 정보들을 설정해서 볼 수 있습니다.",
-        alt: "속도, 기어, 배터리, 시간과 주행 정보를 보여주는 Tesdrive 대시보드",
+        src: dashboardFlipScreen,
+        eyebrow: "플립 커버",
+        title: "플립 커버 화면으로 깔끔하게",
+        description: "작은 플립 커버 화면으로 심플하게도 볼 수 있습니다.",
+        alt: "테슬라 운전대 사이의 작은 플립 커버 화면에 Tesdrive 속도계가 표시된 실제 주행 모습",
       },
       {
         src: vehicleStatusScreen,
