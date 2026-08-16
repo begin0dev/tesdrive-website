@@ -329,29 +329,37 @@ export default function Home() {
                 tabIndex={0}
               >
                 <div className="relative aspect-[19/9] overflow-hidden rounded-[clamp(16px,3vw,32px)] border border-[#05070a] bg-[#05070a]">
-                  <div className="h-[400%] will-change-transform animate-[hero-scenes_14s_ease-in-out_infinite] group-hover:[animation-play-state:paused] group-focus-visible:[animation-play-state:paused] motion-reduce:animate-none">
+                  <div className="h-[500%] will-change-transform animate-[hero-scenes_14s_ease-in-out_infinite] group-hover:[animation-play-state:paused] group-focus-visible:[animation-play-state:paused] motion-reduce:animate-none">
+                    <div className="grid h-1/5 place-items-center bg-[#05070a]">
+                      <Image
+                        className="size-[clamp(88px,15vw,148px)] rounded-[clamp(20px,3vw,36px)]"
+                        src={tesdriveIcon}
+                        alt="Tesdrive 앱 시작 화면"
+                        loading="eager"
+                      />
+                    </div>
                     {heroScreens.map((screen, index) => (
-                      <div className="relative h-1/4" key={screen.src.src}>
+                      <div className="relative h-1/5" key={screen.src.src}>
                         <Image
                           className="object-cover"
                           src={screen.src}
                           alt={screen.alt}
                           fill
                           placeholder="blur"
-                          priority={index === 0}
+                          loading={index === 0 ? "eager" : "lazy"}
                           sizes="(max-width: 640px) calc(100vw - 40px), 820px"
                         />
                       </div>
                     ))}
                     {/* 첫 화면을 한 번 더 두어 애니메이션이 되감길 때 튀지 않게 합니다. */}
-                    <div className="relative h-1/4" aria-hidden="true">
+                    <div
+                      className="grid h-1/5 place-items-center bg-[#05070a]"
+                      aria-hidden="true"
+                    >
                       <Image
-                        className="object-cover"
-                        src={heroScreens[0].src}
+                        className="size-[clamp(88px,15vw,148px)] rounded-[clamp(20px,3vw,36px)]"
+                        src={tesdriveIcon}
                         alt=""
-                        fill
-                        placeholder="blur"
-                        sizes="(max-width: 640px) calc(100vw - 40px), 820px"
                       />
                     </div>
                   </div>
