@@ -68,7 +68,7 @@ export default function PrivacyPage() {
             </p>
             <p className="mt-6 text-sm text-[#5e6675]">
               <strong className="mr-2 text-[#0b0f17]">최종 수정일</strong>
-              <time dateTime="2026-08-16">2026년 8월 16일</time>
+              <time dateTime="2026-08-19">2026년 8월 19일</time>
             </p>
           </header>
 
@@ -182,6 +182,22 @@ export default function PrivacyPage() {
                   기반 경로 안내와 일부 Android 환경의 BLE 검색에 사용합니다.
                   앱은 마지막 위치 좌표를 기기에 저장할 수 있습니다.
                 </li>
+                <li>
+                  <strong>전화 상태 권한:</strong> 통화가 연결되고 종료되는 시점을
+                  감지해 주행 화면에 통화 종료 버튼을 표시하는 데 사용합니다. 앱은
+                  통화 상태 값(대기·수신 중·통화 중)만 사용하며 전화번호, 연락처,
+                  통화 기록은 사용하지 않습니다.
+                </li>
+                <li>
+                  <strong>전화 관리 권한:</strong> 사용자가 화면의 통화 종료 버튼을
+                  누른 경우에만 진행 중인 통화를 종료하는 데 사용합니다. 앱이 전화를
+                  걸거나 자동으로 받지 않습니다.
+                </li>
+                <li>
+                  <strong>다른 앱 위에 표시 권한(선택):</strong> 통화가 연결되면
+                  가려진 주행 화면을 다시 앞으로 되돌리는 데 사용합니다. 허용하지
+                  않아도 통화 종료 버튼은 정상 동작하며 자동 복귀만 제한됩니다.
+                </li>
               </ul>
               <aside className={policyNote} aria-label="위치 정보 안내">
                 <span>위치 정보 안내</span>
@@ -189,6 +205,14 @@ export default function PrivacyPage() {
                   당사는 위치 정보와 이동 경로를 자체 서버에 영구 저장하거나 광고
                   목적으로 사용하지 않습니다. 경로 안내와 목적지 검색에는 아래에
                   설명한 Kakao 및 Tesla 서비스가 관여할 수 있습니다.
+                </p>
+              </aside>
+              <aside className={policyNote} aria-label="통화 정보 안내">
+                <span>통화 정보 안내</span>
+                <p>
+                  통화 상태는 기기 안에서 실시간으로만 처리하며 저장하거나 외부로
+                  전송하지 않습니다. 앱은 통화 기록을 읽는 권한과 전화를 거는 권한을
+                  요청하지 않습니다.
                 </p>
               </aside>
             </section>
@@ -339,6 +363,10 @@ export default function PrivacyPage() {
                   요청 중 일시 처리하며 데이터베이스나 파일에 영구 저장하지 않습니다.
                 </li>
                 <li>
+                  <strong>통화 상태:</strong> 앱이 실행되는 동안 메모리에만 유지하며
+                  기기나 서버에 저장하지 않습니다.
+                </li>
+                <li>
                   <strong>제3자 처리 데이터:</strong> 제3자 서비스가 처리한 정보의
                   보관 및 삭제는 각 사업자의 정책과 계약을 따릅니다.
                 </li>
@@ -348,9 +376,15 @@ export default function PrivacyPage() {
             <section className={policySection}>
               <h2>9. 사용자의 권리</h2>
               <p>
-                사용자는 언제든지 기기 설정에서 앱의 Bluetooth, 위치 등 권한을
+                사용자는 언제든지 기기 설정에서 앱의 Bluetooth, 위치, 전화 등 권한을
                 철회할 수 있습니다. 다만 필수 권한을 철회하면 차량 연결과 대시보드
                 기능 이용이 제한될 수 있습니다.
+              </p>
+              <p>
+                전화 권한은 기기 설정의 앱 권한 화면에서, 다른 앱 위에 표시 권한은
+                특별 접근 권한 화면에서 각각 철회할 수 있습니다. 두 권한을 철회하면
+                통화 종료 버튼과 통화 후 자동 복귀 기능만 동작하지 않으며 나머지
+                기능은 영향을 받지 않습니다.
               </p>
               <p>
                 앱의 Tesla 연동 해지는 기기에 저장된 토큰을 삭제하는 기능입니다.
